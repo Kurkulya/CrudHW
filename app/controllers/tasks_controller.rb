@@ -1,44 +1,47 @@
 class TasksController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_list, only: [:show, :edit, :update, :destroy]
 
   def index
     @tasks = current_user.tasks
   end
 
-  def create
-    current_user.tasks.create(task_create_params)
-    redirect_to '/'
+  def new
+    @task = Task.new
   end
 
   def edit
-    @task = Task.find(params[:id])
-    unless @task
-      redirect_to '/'
+  end
+
+  def create
+    @task = current_user.tasks.new(task_params)
+    if @task.save
+      redirect_to controller: :tasks
+    else
+      render :new
     end
-  end
-
-  def task_create_params
-    params.require(:task).permit(:name, :description)
-  end
-
-  def task_update_params
-    params.permit(:name, :description)
   end
 
   def update
-    task = Task.find(params[:id])
-    if task
-      task.update!(task_update_params)
+    if @task.update(task_params)
+      redirect_to controller: :tasks
+    else
+      render :edit
     end
-    redirect_to '/'
   end
 
   def destroy
-    task = Task.find(params[:id])
-    if task
-      task.destroy!
-    end
-    redirect_to '/'
+    @task.destroy
+    redirect_to controller: :tasks
   end
 
+  private
+
+  def set_list
+    @task = Task.find(params[:id])
+  end
+
+  def task_params
+    params.require(:task).permit(:name, :description)
+  end
 end

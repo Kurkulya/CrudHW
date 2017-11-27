@@ -1,16 +1,15 @@
-
 <% if user_signed_in? %>
     <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
     <div>
     <% @tasks.each do |task| %>
         <div>
           <%= task.name %>
-          <%= link_to 'u', edit_path(id: task.id), method: :post %>
-          <%= link_to 'x', destroy_path(id: task.id), method: :delete %>
+          <%= link_to 'u', edit_task_path(task), method: :get %>
+          <%= link_to 'x', task , method: :delete %>
         </div>
 
     <% end %>
-    <%= link_to 'create task', 'tasks/new' %>
+    <%= button_to 'create task', new_task_path, method: :get %>
     </div>
 <% else %>
     <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
