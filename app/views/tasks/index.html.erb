@@ -1,17 +1,24 @@
-<% if user_signed_in? %>
-    <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-    <div>
-    <% @tasks.each do |task| %>
-        <div>
-          <%= task.name %>
-          <%= link_to 'u', edit_task_path(task), method: :get %>
-          <%= link_to 'x', task , method: :delete %>
-        </div>
+<div align="center">
+  <% if user_signed_in? %>
+      <div style="justify-content: space-between; display: flex">
+        <%= current_user.email %>
+        <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+      </div>
+      <div align="center">
+      <% @tasks.each do |task| %>
+          <div style="justify-content: space-between; display: flex; margin: auto; max-width: 300px; border: 1px solid">
+            <%= task.name %>
+            <div>
+              <%= link_to 'update', edit_task_path(task), method: :get %>
+              <%= link_to 'delete', task , method: :delete %>
+            </div>
+          </div>
 
-    <% end %>
-    <%= button_to 'create task', new_task_path, method: :get %>
-    </div>
-<% else %>
-    <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
-<% end %>
+      <% end %>
+      <%= button_to 'create task', new_task_path, method: :get %>
+      </div>
+  <% else %>
+      <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+  <% end %>
+</div>
 
