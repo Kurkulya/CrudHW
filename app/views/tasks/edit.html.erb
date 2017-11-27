@@ -1,0 +1,6 @@
+<%= form_tag update_path(id: @task.id) %>
+    <% hidden_field_tag :id, value = @task.id%>
+    <%= text_field_tag :name, value = @task.name %>
+    <%= text_field_tag :description, value = @task.description %>
+    <%= submit_tag method: :post %>
+<%= link_to 'show tasks', '/' %>
