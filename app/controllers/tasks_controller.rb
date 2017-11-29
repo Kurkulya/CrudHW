@@ -23,7 +23,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    if @task.update(task_params)
+    if @task.update!(task_params)
       redirect_to controller: :tasks
     else
       render :edit
