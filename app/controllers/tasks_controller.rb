@@ -4,6 +4,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = current_user.tasks
+    render json: @tasks
   end
 
   def new
@@ -42,6 +43,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :expiry, :importance)
   end
 end

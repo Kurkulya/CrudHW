@@ -7,7 +7,10 @@
       <div align="center">
       <% @tasks.each do |task| %>
           <div style="justify-content: space-between; display: flex; margin: auto; max-width: 300px; border: 1px solid">
-            <%= task.name %>
+              <div style="border-right: 1px red solid"><%= task.name %></div>
+              <div style="border-right: 1px red solid"><%= task.description %></div>
+              <div style="border-right: 1px red solid"><%= task.importance %></div>
+              <div style="border-right: 1px red solid"><%= task.expiry %></div>
             <div>
               <%= link_to 'update', edit_task_path(task), method: :get %>
               <%= link_to 'delete', task , method: :delete %>
