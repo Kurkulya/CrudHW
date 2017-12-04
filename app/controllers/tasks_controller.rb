@@ -4,7 +4,10 @@ class TasksController < ApplicationController
 
   def index
     @tasks = current_user.tasks
-    render json: @tasks
+    respond_to do |format|
+      format.html {  }
+      format.json { render json: @tasks, status: :ok}
+    end
   end
 
   def new
@@ -17,29 +20,50 @@ class TasksController < ApplicationController
   def create
     @task = current_user.tasks.new(task_params)
     if @task.save
-      redirect_to controller: :tasks
+      respond_to do |format|
+        format.html { redirect_to controller: :tasks }
+        format.json { render json: @task, status: :ok}
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render :new }
+        format.json { render json: @task, status: :unprocessable_entity}
+      end
     end
   end
 
   def update
-    if @task.update!(task_params)
-      redirect_to controller: :tasks
+    if @task.update(task_params)
+      respond_to do |format|
+        format.html { redirect_to controller: :tasks }
+        format.json { render json: @task, status: :ok}
+      end
     else
-      render :edit
+      respond_to do |format|
+        format.html { render :edit }
+        format.json { render json: @task, status: :unprocessable_entity}
+      end
     end
   end
 
   def destroy
-    @task.destroy
-    redirect_to controller: :tasks
+    if @task && @task.destroy
+      respond_to do |format|
+        format.html { redirect_to controller: :tasks}
+        format.json { render json: @task, status: :ok}
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to controller: :tasks}
+        format.json { render json: @task, status: :unprocessable_entity}
+      end
+    end
   end
 
   private
 
   def set_list
-    @task = Task.find(params[:id])
+    @task = Task.find_by(id: params[:id])
   end
 
   def task_params
