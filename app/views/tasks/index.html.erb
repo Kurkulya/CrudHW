@@ -2,22 +2,37 @@
   <% if user_signed_in? %>
       <div style="justify-content: space-between; display: flex">
         <%= current_user.email %>
-        <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+        <div>
+          <%= link_to :en, '/?locale=en', :method => :get %>
+          <%= link_to :ru, '/?locale=ru', :method => :get %>
+          <%= link_to t(:exit), destroy_user_session_path, :method => :delete %>
+        </div>
       </div>
       <div align="center">
-      <% @tasks.each do |task| %>
-          <div style="justify-content: space-between; display: flex; margin: auto; max-width: 300px; border: 1px solid">
-              <div style="border-right: 1px red solid"><%= task.name %></div>
-              <div style="border-right: 1px red solid"><%= task.description %></div>
-              <div style="border-right: 1px red solid"><%= task.importance %></div>
-              <div style="border-right: 1px red solid"><%= task.expiry %></div>
-            <div>
-              <%= link_to 'update', edit_task_path(task), method: :get %>
-              <%= link_to 'delete', task , method: :delete %>
-            </div>
-          </div>
-
-      <% end %>
+        <table style="width:100%">
+          <tr>
+            <td><%= t :status %></td>
+            <td><%= t :name %></td>
+            <td><%= t :description %></td>
+            <td><%= t :importance %></td>
+            <td><%= t :expiry %></td>
+          </tr>
+        <% @tasks.each do |task| %>
+              <tr>
+                <% if task.is_done%>
+                  <td><%= t :done%></td>
+                <% else task.is_done%>
+                  <td><%= t :undone%></td>
+                <% end %>
+                <td><%= task.name %></td>
+                <td><%= task.description %></td>
+                <td><%= task.importance %></td>
+                <td><%= task.expiry %></td>
+                <td><%= link_to t(:update), edit_task_path(task), method: :get %></td>
+                <td><%= link_to t(:delete), task , method: :delete %></td>
+              </tr>
+        <% end %>
+        </table>
       <%= button_to 'create task', new_task_path, method: :get %>
       </div>
   <% else %>

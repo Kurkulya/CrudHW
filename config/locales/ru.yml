@@ -29,15 +29,15 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  name:  "Name"
-  status: "Status"
-  description: "Description"
-  importance: "Importance"
-  expiry: "Expiry"
-  done: "Done"
-  undone: "Undone"
-  update: "Update"
-  delete: "Delete"
-  exit: "SignOut"
+ru:
+  status: "Статус"
+  hello: "Привет мир"
+  name:  "Имя"
+  description: "Описание"
+  importance: "Важность"
+  expiry: "Срок"
+  done: "Выполнена"
+  undone: "Невыполнена"
+  update: "Обновить"
+  delete: "Удалить"
+  exit: "Выйти"
