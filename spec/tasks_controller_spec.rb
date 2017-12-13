@@ -109,6 +109,18 @@ describe TasksController, :type => :controller do
       expect(response).to have_http_status (:unprocessable_entity)
     end
 
+    it ' should update is_done' do
+      task = FactoryBot.create(:task, user_id: @user.id)
+      patch :update, params: { id: task.id, task: { is_done: true } }, format: :json
+      expect(JSON.parse(response.body)['is_done']).to eq(true)
+    end
+
+    it ' should update importance' do
+      task = FactoryBot.create(:task, user_id: @user.id)
+      patch :update, params: { id: task.id, task: { importance: 'low' } }, format: :json
+      expect(JSON.parse(response.body)['importance']).to eq('low')
+    end
+
   end
 
   describe "DELETE 'task'/'destroy'" do
@@ -121,6 +133,18 @@ describe TasksController, :type => :controller do
     it ' should not destroy not existed list' do
       delete :destroy, params: { id: -1 }, format: :json
       expect(response).to have_http_status (:unprocessable_entity)
+    end
+  end
+
+  describe "set_lang" do
+    it ' set ru locale' do
+      @user.set_lang(:ru);
+      expect(@user.lang).to eq ("ru")
+    end
+
+    it ' set en locale' do
+      @user.set_lang(:en);
+      expect(@user.lang).to eq ("en")
     end
   end
 end

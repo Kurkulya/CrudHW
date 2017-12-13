@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-12-04T05:00:25+02:00">2017-12-04T05:00:25+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-12-13T10:18:03+02:00">2017-12-13T10:18:03+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.01
+         2.13
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>24</b> files in total.
-    <b>194</b> relevant lines. 
-    <span class="green"><b>194</b> lines covered</span> and
+    <b>223</b> relevant lines. 
+    <span class="green"><b>223</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#3a9f55ec900e2544c4b7f6efe8118e46743f3ed2" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>3</td>
-        <td>2</td>
-        <td>2</td>
+        <td>12</td>
+        <td>5</td>
+        <td>5</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>5.6</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>41</td>
         <td>41</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
@@ -113,19 +113,19 @@
       <tr>
         <td class="strong"><a href="#06f92abe42aed212b843af223a64aa5c86ae355b" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
-        <td>3</td>
-        <td>3</td>
+        <td>15</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#abd68e611cd9827736c8c2492d4137eee0872e65" class="src_link" title="config/application.rb">config/application.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>9</td>
-        <td>9</td>
+        <td>24</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -263,19 +263,19 @@
       <tr>
         <td class="strong"><a href="#8bd0706c36e0ed46b465f7389c068652548222b6" class="src_link" title="spec/factory.rb">spec/factory.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
-        <td>8</td>
-        <td>8</td>
+        <td>17</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
-        <td>3.0</td>
+        <td>2.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#0c4d4cbfea0846f83e6bce0232036497a6f5583f" class="src_link" title="spec/tasks_controller_spec.rb">spec/tasks_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>126</td>
-        <td>79</td>
-        <td>79</td>
+        <td>150</td>
+        <td>94</td>
+        <td>94</td>
         <td>0</td>
         <td>1.9</td>
       </tr>
@@ -311,8 +311,8 @@
     <h3>app/controllers/application_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>2</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -332,7 +332,61 @@
           <code class="ruby">  protect_from_forgery with: :exception</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_action :set_locale</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  # def after_sign_in_path_for(resource_or_scope)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  #   I18n.locale = current_user.try(:lang) || I18n.default_locale</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def set_locale</code>
+        </li>
+      
+        <li class="covered" data-hits="24" data-linenumber="10">
+          <span class="hits">24</span>
+          
+          <code class="ruby">    I18n.locale = params[:locale] || I18n.default_locale</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">end</code>
@@ -390,7 +444,7 @@
         <li class="covered" data-hits="6" data-linenumber="6">
           <span class="hits">6</span>
           
-          <code class="ruby">    @tasks = current_user.tasks</code>
+          <code class="ruby">    @tasks = current_user.tasks.order(:expiry)</code>
         </li>
       
         <li class="covered" data-hits="6" data-linenumber="7">
@@ -567,26 +621,26 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="36">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="36">
+          <span class="hits">6</span>
           
           <code class="ruby">    if @task.update(task_params)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="37">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="37">
+          <span class="hits">4</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="38">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="38">
+          <span class="hits">4</span>
           
           <code class="ruby">        format.html { redirect_to controller: :tasks }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="39">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="8" data-linenumber="39">
+          <span class="hits">8</span>
           
           <code class="ruby">        format.json { render json: @task, status: :ok}</code>
         </li>
@@ -747,8 +801,8 @@
           <code class="ruby">  def set_list</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="66">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="66">
+          <span class="hits">8</span>
           
           <code class="ruby">    @task = Task.find_by(id: params[:id])</code>
         </li>
@@ -771,10 +825,10 @@
           <code class="ruby">  def task_params</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="70">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="15" data-linenumber="70">
+          <span class="hits">15</span>
           
-          <code class="ruby">    params.require(:task).permit(:name, :description, :expiry, :importance)</code>
+          <code class="ruby">    params.require(:task).permit(:name, :description, :expiry, :importance, :is_done)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
@@ -959,8 +1013,8 @@
     <h3>app/models/user.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1013,6 +1067,48 @@
         <li class="never" data-hits="" data-linenumber="8">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def set_lang(lang)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="10">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    I18n.locale = lang || I18n.default_locale</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    self.lang = lang</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    self.save</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
           <code class="ruby">end</code>
         </li>
       
@@ -1026,8 +1122,8 @@
     <h3>config/application.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1149,13 +1245,31 @@
           <code class="ruby">    # -- all .rb files in that directory are automatically loaded.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    config.i18n.load_path += Dir[Rails.root.join(&#39;config&#39;, &#39;locales&#39;, &#39;*.{rb,yml}&#39;).to_s]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    I18n.available_locales = [:en, :ru]</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    config.i18n.default_locale = :en</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
@@ -3826,16 +3940,16 @@
           <code class="ruby">  root &#39;tasks#index&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">  get &#39;/&#39;, to:&#39;tasks#index&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
@@ -3860,8 +3974,8 @@
     <h3>spec/factory.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3881,8 +3995,8 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="3">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="21" data-linenumber="3">
+          <span class="hits">21</span>
           
           <code class="ruby">    email { Faker::Internet.email }</code>
         </li>
@@ -3899,49 +4013,73 @@
           <code class="ruby">    password_confirmation &#39;password&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    lang &#39;en&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">  factory :task do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    name &#39;default task content&#39;</code>
+          <code class="ruby">  factory :task do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
+          <code class="ruby">    name &#39;default task content&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
           <code class="ruby">    description &#39;sdasdasdsdsd&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expiry &#39;2017-08-13&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    importance &#39;high&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    is_done false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -3957,8 +4095,8 @@
     <h3>spec/tasks_controller_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>79</b> relevant lines. 
-      <span class="green"><b>79</b> lines covered</span> and
+      <b>94</b> relevant lines. 
+      <span class="green"><b>94</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3984,20 +4122,20 @@
           <code class="ruby">def authenticate_user</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="4">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="20" data-linenumber="4">
+          <span class="hits">20</span>
           
           <code class="ruby">  @user = FactoryBot.create(:user)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="5">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="20" data-linenumber="5">
+          <span class="hits">20</span>
           
           <code class="ruby">  allow(controller).to receive(:authenticate_user!).and_return(true)</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="6">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="20" data-linenumber="6">
+          <span class="hits">20</span>
           
           <code class="ruby">  allow(controller).to receive(:current_user).and_return(@user)</code>
         </li>
@@ -4032,8 +4170,8 @@
           <code class="ruby">  before do</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="12">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="20" data-linenumber="12">
+          <span class="hits">20</span>
           
           <code class="ruby">    authenticate_user</code>
         </li>
@@ -4632,91 +4770,235 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="112">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="113">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="114">
+        <li class="covered" data-hits="1" data-linenumber="112">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &quot;DELETE &#39;task&#39;/&#39;destroy&#39;&quot; do</code>
+          <code class="ruby">    it &#39; should update is_done&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="115">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &#39; should destroy list&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="116">
+        <li class="covered" data-hits="1" data-linenumber="113">
           <span class="hits">1</span>
           
           <code class="ruby">      task = FactoryBot.create(:task, user_id: @user.id)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="117">
+        <li class="covered" data-hits="1" data-linenumber="114">
           <span class="hits">1</span>
           
-          <code class="ruby">      delete :destroy, params: { id: task.id }, format: :json</code>
+          <code class="ruby">      patch :update, params: { id: task.id, task: { is_done: true } }, format: :json</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="118">
+        <li class="covered" data-hits="1" data-linenumber="115">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(response).to have_http_status (:success)</code>
+          <code class="ruby">      expect(JSON.parse(response.body)[&#39;is_done&#39;]).to eq(true)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="119">
+        <li class="never" data-hits="" data-linenumber="116">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="never" data-hits="" data-linenumber="117">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="118">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39; should update importance&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="119">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      task = FactoryBot.create(:task, user_id: @user.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      patch :update, params: { id: task.id, task: { importance: &#39;low&#39; } }, format: :json</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="121">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39; should not destroy not existed list&#39; do</code>
+          <code class="ruby">      expect(JSON.parse(response.body)[&#39;importance&#39;]).to eq(&#39;low&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="122">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      delete :destroy, params: { id: -1 }, format: :json</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="123">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(response).to have_http_status (:unprocessable_entity)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="124">
+        <li class="never" data-hits="" data-linenumber="122">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="125">
+        <li class="never" data-hits="" data-linenumber="123">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="124">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="126">
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="126">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;DELETE &#39;task&#39;/&#39;destroy&#39;&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="127">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39; should destroy list&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="128">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      task = FactoryBot.create(:task, user_id: @user.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="129">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete :destroy, params: { id: task.id }, format: :json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status (:success)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="131">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="132">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39; should not destroy not existed list&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      delete :destroy, params: { id: -1 }, format: :json</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="135">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(response).to have_http_status (:unprocessable_entity)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="136">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="137">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="138">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="139">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;set_lang&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="140">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39; set ru locale&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="141">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @user.set_lang(:ru);</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="142">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@user.lang).to eq (&quot;ru&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="143">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &#39; set en locale&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      @user.set_lang(:en);</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="147">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(@user.lang).to eq (&quot;en&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
           
           
           <code class="ruby">end</code>

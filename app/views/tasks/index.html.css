@@ -1,0 +1,9 @@
+.upper_links {
+    display: flex;
+    justify-content: space-between;
+}
+table {
+    margin: auto;
+    width: 100%;
+    border: 2px red solid;
+}

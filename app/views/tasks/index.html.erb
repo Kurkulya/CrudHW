@@ -1,6 +1,6 @@
 <div align="center">
   <% if user_signed_in? %>
-      <div style="justify-content: space-between; display: flex">
+      <div class="upper_links" >
         <%= current_user.email %>
         <div>
           <%= link_to :en, '/?locale=en', :method => :get %>
@@ -9,7 +9,7 @@
         </div>
       </div>
       <div align="center">
-        <table style="width:100%">
+        <table class="table">
           <tr>
             <td><%= t :status %></td>
             <td><%= t :name %></td>
